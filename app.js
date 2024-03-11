@@ -151,7 +151,7 @@ const checkRequestsBody = async (request, response, next) => {
       );
       const isValidDate = await isValid(result);
       if (isValidDate === true) {
-        request.date = formatedDate;
+        request.dueDate = formatedDate;
       } else {
         response.status(400);
         response.send("Invalid Due Date");
